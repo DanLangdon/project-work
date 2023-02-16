@@ -13,28 +13,6 @@ trait Origin[A] {
 
 }
 
-//trait Monad[F[_], A] extends Functor[F, A] {
-//  def pure(a: A): F[A] = Monad(a)
-//  def flatten(a: F[F[A]]): F[A]
-//  def flatMap[B](f : A => F[B]): F[B] = flatten(map(f))
-//}
-//
-//object Monad {
-//
-//  def apply[F[_], A](a: A): F[A] = ???
-//  def flatMap[F[_], A, B](fa: F[A])(f : A => F[B]): F[B] = ???
-//}
-//
-//trait Functor[F[_], A] {
-//
-//  def map[B](f : A => B): F[B]
-//}
-//
-//object Functor {
-//
-//  def map[F[_], A, B](fa: F[A])(f : A => B): F[B] = ???
-//}
-
 final class Path(val p: String) extends AnyVal
 
 object Path {
