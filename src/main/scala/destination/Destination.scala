@@ -21,11 +21,14 @@ case object FileDestination extends Destination[String]{
   }
 
   def save(cleanedSource : String) = {
-    val fileObject = new File("output1.txt")
+    val fileObject = new File("/src/resources/output1.txt")
     val fileContents = writeToFile(fileObject, cleanedSource)
-
   }
-  def transform(source : String): String = ???
+  def transform(source : String): String = {
+
+    val transformedSource = source.toLowerCase()
+    if(transformedSource.contains('!')) transformedSource.replace('!', '.') else transformedSource
+  }
 }
 
 final case class FileDestination2(loader: String => String) extends Destination[String] {
