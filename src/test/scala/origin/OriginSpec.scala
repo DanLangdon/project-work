@@ -13,6 +13,6 @@ class OriginSpec extends AnyFlatSpec with Matchers {
   }
 
   "FileOrigin2" should "take a file path and extract the file" in {
-    FileOrigin2(_ => "fish;;").extractAndClean("src/resources/input/test1.txt") shouldEqual "fish"
+    StringOrigin(_ => "fish;;").extractAndClean("src/resources/input/test1.txt") shouldEqual "fish"
   }
 }
