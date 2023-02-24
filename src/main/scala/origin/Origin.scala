@@ -39,7 +39,6 @@ final case class ListOrigin(loader: String => List[Int]) extends Origin[String, 
   def clean(extractedSource: List[Int]): List[Int] = {
 
     if (extractedSource.nonEmpty) {
-
       val result = extractedSource.map(i => i - 1)
       result
     } else extractedSource
