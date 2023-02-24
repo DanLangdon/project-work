@@ -22,16 +22,6 @@ object Path {
   }
 }
 
-case object FileOrigin extends Origin[String] {
-
-  def extract(source: String): String = Source.fromFile(source).getLines.mkString
-
-  def clean(extractedSource: String): String = {
-    extractedSource.toLowerCase()
-      .replaceAll(";|:", "")
-  }
-}
-
 final case class FileOrigin2(loader: String => String) extends Origin[String] {
 
   def extract(source: String): String = loader(source)
