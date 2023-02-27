@@ -1,5 +1,5 @@
 package origin
-
+import io.circe._, io.circe.parser._
 trait Origin[A, B] {
 
   def extract(source: A): B
@@ -41,4 +41,6 @@ final case class ListOrigin(loader: String => List[Int]) extends Origin[String, 
       result
     } else extractedSource
   }
+
+  final case class JsonOrigin(loader: Json => String)
 }
