@@ -4,6 +4,7 @@ ThisBuild / scalaVersion     := "2.13.8"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
+libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.17.2"
 
 lazy val root = (project in file("."))
   .settings(

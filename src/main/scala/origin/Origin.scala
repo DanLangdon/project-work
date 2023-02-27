@@ -1,7 +1,5 @@
 package origin
 
-import scala.io.Source
-
 trait Origin[A, B] {
 
   def extract(source: A): B

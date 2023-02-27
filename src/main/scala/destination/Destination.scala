@@ -1,6 +1,5 @@
 package destination
 import java.io.{File, FileWriter}
-import scala.io.Source
 
 trait Destination[A] {
 
